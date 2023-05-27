@@ -45,6 +45,7 @@ local app2Ime = {
     {'/Applications/Postman.app', 'English'},
     {'/Applications/Termius.app', 'English'},
     {'/Applications/Transmit.app', 'English'},
+    {'/Applications/Royal TSX.app', 'English'},
 }
 
 function updateFocusAppInputMethod()
