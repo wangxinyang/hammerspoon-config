@@ -2,7 +2,7 @@ hyper = {"cmd", "ctrl", "alt"}
 hyperShift = {"alt", "shift"}
 hyperCtrl = {"alt", "ctrl"}
 hyperAlt = {"ctrl", "alt", "shift"}
-hyperCmd = {"cmd"}
+hyperCmdShift = {"cmd", "shift"}
 -- lock screen shortcut
 hs.hotkey.bind({'cmd'}, 'L', function() hs.caffeinate.startScreensaver() end)
 -- open app

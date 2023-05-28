@@ -15,7 +15,7 @@ local mouse = require "hs.mouse"
 window.animationDuration = 0
 
 -- left half
-hotkey.bind(hyperCmd, "Left", function()
+hotkey.bind(hyperCmdShift, "Left", function()
   if window.focusedWindow() then
     window.focusedWindow():moveToUnit(layout.left50)
   else
@@ -24,17 +24,17 @@ hotkey.bind(hyperCmd, "Left", function()
 end)
 
 -- right half
-hotkey.bind(hyperCmd, "Right", function()
+hotkey.bind(hyperCmdShift, "Right", function()
   window.focusedWindow():moveToUnit(layout.right50)
 end)
 
 -- top half
-hotkey.bind(hyperCmd, "Up", function()
+hotkey.bind(hyperCmdShift, "Up", function()
   window.focusedWindow():moveToUnit'[0,0,100,50]'
 end)
 
 -- bottom half
-hotkey.bind(hyperCmd, "Down", function()
+hotkey.bind(hyperCmdShift, "Down", function()
   window.focusedWindow():moveToUnit'[0,50,100,100]'
 end)
 
@@ -69,7 +69,7 @@ hotkey.bind(hyper, 'C', function()
 end)
 
 -- maximize window
-hotkey.bind(hyperCmd, 'M', function() toggle_maximize() end)
+hotkey.bind(hyperCmdShift, 'M', function() toggle_maximize() end)
 
 -- defines for window maximize toggler
 local frameCache = {}

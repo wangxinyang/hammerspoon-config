@@ -1,6 +1,18 @@
 require "ime"
 require "hotkey"
 require "windows"
+require "modules/utils/utils"
+require "modules/pasteboard/pasteboard"
+require "modules/weather/weather"
+
+
+-- 注册剪贴板监控
+PasteboardWatcher = RegisterPasteboardWatcher()
+PasteboardWatcher:start()
+
+-- 天气组件
+WeatherComponent = RegisterWeatherComponent()
+WeatherComponent:start()
 
 local function reloadConfig(paths)
     doReload = false
@@ -18,3 +30,4 @@ local function reloadConfig(paths)
 end
 configFileWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig)
 configFileWatcher:start()
+
