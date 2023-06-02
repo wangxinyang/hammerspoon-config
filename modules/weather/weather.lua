@@ -28,6 +28,8 @@ local function getWeaEmoji(weatherInfoCN)
         weatherInfoPY = 'yunyu'
     elseif weatherInfoCN == "曇一時雨" then
         weatherInfoPY = 'yunyu'
+    elseif weatherInfoCN == "晴時々曇" then
+        weatherInfoPY = 'qing'
     elseif weatherInfoCN == "晴" then
         weatherInfoPY = 'qing'
     elseif weatherInfoCN == "沙尘" then
@@ -73,7 +75,12 @@ function GetWeather()
         print(wind)
         menuData = {}
 
-        WeatherMenubar:setTitle(getWeaEmoji(weather[1].telop)..(weather[1].temperature.max.celsius).." "..weather[1].telop)
+				if weather[1].temperature.max.celsius ~= nil then
+		        WeatherMenubar:setTitle(getWeaEmoji(weather[1].telop)..(weather[1].temperature.max.celsius).." "..weather[1].telop)
+			  else 
+		        WeatherMenubar:setTitle(getWeaEmoji(weather[1].telop))
+				end
+
 
         local dateTable = FormatTimeToDateTable(publish_time, "%Y-%m-%d %H:%M")
 
