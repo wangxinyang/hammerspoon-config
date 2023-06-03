@@ -28,6 +28,8 @@ local function getWeaEmoji(weatherInfoCN)
         weatherInfoPY = 'yunyu'
     elseif weatherInfoCN == "曇一時雨" then
         weatherInfoPY = 'yunyu'
+    elseif weatherInfoCN == "曇り" then
+        weatherInfoPY = 'yun'
     elseif weatherInfoCN == "晴時々曇" then
         weatherInfoPY = 'qing'
     elseif weatherInfoCN == "晴" then
