@@ -15,6 +15,7 @@ local weaEmoji = {
     zhenyu = '🌧',
     yin = '☁️',
     qingyun = '☀️⛅️',
+    yunqing = '⛅️☀️',
     yunyu = '⛅️🌧',
     default = '⌛'
 }
@@ -26,13 +27,17 @@ local function getWeaEmoji(weatherInfoCN)
         weatherInfoPY = 'qingyun'
     elseif weatherInfoCN == "曇時々雨" then
         weatherInfoPY = 'yunyu'
+    elseif weatherInfoCN == "曇時々晴" then
+        weatherInfoPY = 'yunqing'
     elseif weatherInfoCN == "曇一時雨" then
         weatherInfoPY = 'yunyu'
     elseif weatherInfoCN == "曇り" then
         weatherInfoPY = 'yun'
     elseif weatherInfoCN == "晴時々曇" then
         weatherInfoPY = 'qing'
-    elseif weatherInfoCN == "晴" then
+    elseif weatherInfoCN == "曇のち晴" then
+        weatherInfoPY = 'yunqing'
+    elseif weatherInfoCN == "晴れ" then
         weatherInfoPY = 'qing'
     elseif weatherInfoCN == "沙尘" then
         weatherInfoPY = 'shachen'
@@ -71,10 +76,10 @@ function GetWeather()
         local wind_all = weather[1].detail.wind
 
         print(wind_all)
-        local wind_first_index = string.find(wind_all, "　")
-        print(wind_first_index)
-        local wind = string.sub(wind_all, 0, wind_first_index + 1)
-        print(wind)
+        -- local wind_first_index = string.find(wind_all, "　") 
+        -- print(wind_first_index)
+        -- local wind = string.sub(wind_all, 0, wind_first_index + 1)
+        -- print(wind)
         menuData = {}
 
 				if weather[1].temperature.max.celsius ~= nil then

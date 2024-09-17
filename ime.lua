@@ -46,6 +46,7 @@ local app2Ime = {
     {'/Applications/Termius.app', 'English'},
     {'/Applications/Transmit.app', 'English'},
     {'/Applications/Royal TSX.app', 'English'},
+    {'/Applications/Anki.app', 'Japnese'},
 }
 
 function updateFocusAppInputMethod()
