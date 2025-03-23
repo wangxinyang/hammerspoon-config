@@ -47,6 +47,8 @@ local app2Ime = {
     {'/Applications/Transmit.app', 'English'},
     {'/Applications/Royal TSX.app', 'English'},
     {'/Applications/Anki.app', 'Japnese'},
+    {'/Applications/Windsurf.app', 'English'},
+    {'/Applications/BBEdit.app', 'English'},
 }
 
 function updateFocusAppInputMethod()
